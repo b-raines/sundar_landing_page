@@ -1,0 +1,156 @@
+
+// Imports
+@import compass
+@import zen
+
+
+// Constants
+$zen-column-count: 8
+$zen-gutter-width: 20px !default
+
+
+// Universal
+html
+  font-size: 16px
+
+body
+  font-size: 62.5% /* 1em = 10px */
+
+.container
+  +zen-grid-container
+  font-size: 1.6em
+  font-family: 'Josefin Slab', serif
+
+.left-col
+  +zen-grid-item(3,2)
+
+.right-col
+  +zen-grid-item(3,5)
+
+// Typography
+span.bold
+  font-size: 1.1em
+  font-family: 'Josefin Sans', sans-serif
+  font-weight: 700
+
+// Header
+#head
+  padding: 5px 20px
+
+.logo
+  margin: 15px 0 0
+  font-size: 4.5em
+  font-family: 'Josefin Sans', sans-serif
+
+.one-liner
+  font-size: 1.5em
+  font-family: 'Josefin Slab', serif
+  letter-spacing: 0.5px
+  p
+    margin: 0 0 0 5px
+
+// Main Content
+.main-content
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(232,232,232,0.65) 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(232,232,232,0.65)))
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(232,232,232,0.65) 100%)
+  background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(232,232,232,0.65) 100%)
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(232,232,232,0.65) 100%)
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(232,232,232,0.65) 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6e8e8e8',GradientType=0 )
+  height: 24em
+  overflow: hidden
+  h3
+    text-align: center
+
+.signup
+  display: inline-block
+  margin: 50px 0 0 50px
+  padding: 15px 0
+  font-size: 1.1em
+
+
+.button-submit
+  position: relative
+  top: -33px
+  margin-left: 10px
+  border: none
+  height: 75px
+  width: 140px
+  font-family: 'Josefin Sans', sans-serif
+  font-size: 1.7em
+  font-weight: bold
+  letter-spacing: 1px
+  background-color: rgb(255, 25, 25)
+  color: white
+  +box-shadow(gray 0 0 5px)
+  +text-shadow(gray 1px 1px 8px)
+  +transition(all 0.2s ease-in-out)
+  &:hover
+    background-color: rgb(200, 0, 0)
+
+.email
+  width: 250px
+  height: 28px
+
+select.type
+  position: relative
+  top: -10px
+  height: 28px
+  width: 255px
+  padding: 5px
+  border: solid #aaa 1px
+
+.ipad
+  float: right
+  position: relative
+  top: 25px
+  margin-right: 25px
+  width: 600px
+
+// Bullets
+.bullets
+  padding-top: 10px
+  background-color: white
+  width: 100%
+  overflow: auto
+  p
+    letter-spacing: 0.3px
+
+// Awards
+#award-statement
+  +zen-clear()
+  text-align: center
+
+.awards
+  list-style: none
+  padding: 0
+  margin: 0 auto
+  text-align: center
+  li
+    display: inline
+    img
+      margin: 0 40px 20px 40px
+
+
+.award-img
+  width: 200px
+
+// Footer
+footer
+  background-color: #111
+  padding: 10px 0 25px 0
+  margin-top: 20px
+  font-family: 'Josefin Sans', sans-serif
+  ul
+    margin: 5px
+    list-style: none
+    text-align: center
+    li
+      display: inline
+      a
+        font-size: 1.1em
+        color: white
+        letter-spacing: 0.8px
+        text-decoration: none
+
