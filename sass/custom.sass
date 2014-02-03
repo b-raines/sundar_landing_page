@@ -18,6 +18,7 @@ body
 
 .container
   +zen-grid-container
+  margin: 0 50px
   font-size: 1.6em
   font-family: 'Josefin Slab', serif
 
@@ -34,32 +35,31 @@ span.bold
   font-weight: 700
 
 // Header
-#head
-  padding: 5px 20px
 
 .logo
-  margin: 15px 0 0
+  margin: 15px 0 0 5px
   font-size: 4.5em
   font-family: 'Josefin Sans', sans-serif
 
 .one-liner
+  +zen-grid-item(4,1)
   font-size: 1.5em
   font-family: 'Josefin Slab', serif
   letter-spacing: 0.5px
   p
-    margin: 0 0 0 5px
+    margin: 0
 
 // Main Content
 .main-content
-  height: 24em
+  +zen-clear()
   overflow: hidden
   h3
     text-align: center
 
 .signup
   display: inline-block
-  margin: 50px 0 0 50px
-  padding: 15px 0
+  margin: 0 50px
+  padding: 15px 0 0 0
   font-size: 1.1em
 
 
@@ -74,7 +74,7 @@ span.bold
   font-size: 1.7em
   font-weight: bold
   letter-spacing: 1px
-  background-color: #FF0D80
+  background-color: #FF2F5C
   color: white
   +box-shadow(gray 0 0 5px)
   +text-shadow(gray 1px 1px 8px)
@@ -94,19 +94,11 @@ select.type
   padding: 5px
   border: solid #aaa 1px
 
-.ipad
-  float: right
-  position: relative
-  top: 25px
-  margin-right: 25px
-  width: 600px
-
 // Bullets
 .bullets
+  +zen-clear()
+  +zen-grid-item(4,1)
   padding-top: 10px
-  background-color: white
-  width: 100%
-  overflow: auto
   p
     letter-spacing: 0.3px
 
