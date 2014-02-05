@@ -22,12 +22,6 @@ body
   font-size: 1.6em
   font-family: 'Josefin Slab', serif
 
-.left-col
-  +zen-grid-item(3,2)
-
-.right-col
-  +zen-grid-item(3,5)
-
 // Typography
 span.bold
   font-size: 1.1em
@@ -35,74 +29,79 @@ span.bold
   font-weight: 700
 
 // Header
+header
+  +zen-grid-item(4,1)
 
 .logo
-  margin: 15px 0 0 5px
+  text-align: center
+  margin: 15px 0 10px 5px
   font-size: 4.5em
   font-family: 'Josefin Sans', sans-serif
 
 .one-liner
-  +zen-grid-item(4,1)
   font-size: 1.5em
   font-family: 'Josefin Slab', serif
   letter-spacing: 0.5px
   p
-    margin: 0
+    margin: 0 0 0 -10px
 
-// Main Content
-.main-content
-  +zen-clear()
-  overflow: hidden
-  h3
-    text-align: center
+// Tiles
+#tiles
+  position: absolute
+  display: inline-block
+  top: 30px
+  +zen-grid-item(4,5)
+
+.tile
+  width: 20%
+  padding: 13px 1px
+
+// Form
 
 .signup
-  display: inline-block
-  margin: 0 50px
-  padding: 15px 0 0 0
+  +zen-clear()
+  +zen-grid-item(4,1)
   font-size: 1.1em
 
-
 .button-submit
-  position: relative
-  top: -33px
-  margin-left: 10px
+  margin: 5px 0
   border: none
-  height: 75px
-  width: 140px
+  height: 33px
+  width: 110px
   font-family: 'Josefin Sans', sans-serif
-  font-size: 1.7em
+  font-size: 1.3em
   font-weight: bold
   letter-spacing: 1px
   background-color: #FF2F5C
   color: white
-  +box-shadow(gray 0 0 5px)
-  +text-shadow(gray 1px 1px 8px)
-  +transition(all 0.2s ease-in-out)
   &:hover
-    background-color: rgb(200, 0, 0)
+    background-color: #B21034
 
 .email
-  width: 250px
-  height: 28px
+  margin: 5px 0
+  width: 320px
+  height: 27px
 
 select.type
-  position: relative
-  top: -10px
-  height: 28px
-  width: 255px
-  padding: 5px
+  margin: 5px 0
+  height: 27px
+  width: 327px
   border: solid #aaa 1px
 
 // Bullets
 .bullets
+  display: inline-block
   +zen-clear()
   +zen-grid-item(4,1)
-  padding-top: 10px
+  padding: 10px 0 0 0
   p
     letter-spacing: 0.3px
 
-// Awards
+// Press
+.press
+  +zen-clear
+  +zen-grid-item(4,1)
+
 #award-statement
   +zen-clear()
   text-align: center
@@ -118,15 +117,24 @@ select.type
       margin: 0 40px 20px 40px
 
 
-.award-img
-  width: 200px
+#conde-logo
+  width: 250px
+  position: relative
+  top: -35px
+
+#cfda-logo
+  width: 180px
 
 // Footer
 footer
+  position: absolute
+  bottom: 0
+  width: 100%
   background-color: #111
   padding: 10px 0 25px 0
   margin-top: 20px
   font-family: 'Josefin Sans', sans-serif
+  font-size: 1.7em
   ul
     margin: 5px
     list-style: none
