@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="stylesheets/normalize.css" />
 	<link rel="stylesheet" href="stylesheets/custom.css" />
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Josefin+Slab:400,600' rel='stylesheet' type='text/css'>
+	<script src="js/jquery_1_11_0_min.js"></script>
+	<script src="js/custom-ck.js"></script>
 
 </head>
 
@@ -52,16 +54,16 @@
 			</div>
 		</div>
 
-		<form class="signup">
+		<form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			<h3>Subscribe now to partner with SUNDAR</h3>
 			
-			<select class="type" required>
+			<select id="type" required>
 				<option value="" default selected>I am a...</option>
 				<option value="designer">Designer</option>
 				<option value="supplier">Supplier</option>
 			</select></br>
 
-			<input class="email" type="email" name="email" placeholder="Email" required></br>
+			<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"></br>
 
 			<input class="button-submit" type="submit" value="Sign up">
 		</form>
