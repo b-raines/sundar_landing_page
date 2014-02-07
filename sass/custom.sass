@@ -8,6 +8,10 @@
 $zen-column-count: 8
 $zen-gutter-width: 20px !default
 
+$break-large: 1100px
+$break-medium: 800px
+$break-small: 520px
+
 
 // Universal
 html
@@ -31,25 +35,31 @@ span.bold
 // Header
 header
   +zen-grid-item(4,1)
+  padding-left: 0
 
 .logo
   text-align: center
   margin: 15px 0 10px 5px
   font-size: 4.5em
   font-family: 'Josefin Sans', sans-serif
+  @media screen and (max-width: $break-medium)
+    margin-left: 0
+    text-align: left
 
 .one-liner
   font-size: 1.5em
   font-family: 'Josefin Sans', serif
   letter-spacing: 0.5px
   p
-    margin: 0 0 0 -10px
+    margin-bottom: 0
+    margin-top: 0
 
 // Tiles
 #tiles
   position: absolute
   display: inline-block
   top: 30px
+  margin-right: 20px
   +zen-grid-item(4,5)
 
 .tile
@@ -62,6 +72,9 @@ header
   +zen-clear()
   +zen-grid-item(4,1)
   font-size: 1.1em
+  @media screen and (max-width: $break-medium)
+    text-align: center
+    +zen-grid-item(8,1)
 
 .button-submit
   margin: 5px 0
@@ -99,6 +112,8 @@ select#type
 .press
   +zen-clear
   +zen-grid-item(4,1)
+  @media screen and (max-width: $break-large)
+    +zen-grid-item(8,1)
 
 #award-statement
   +zen-clear()
@@ -145,4 +160,3 @@ footer
         color: white
         letter-spacing: 0.8px
         text-decoration: none
-
