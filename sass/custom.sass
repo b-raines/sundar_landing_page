@@ -59,8 +59,9 @@ header
   position: absolute
   display: inline-block
   top: 30px
-  margin-right: 20px
   +zen-grid-item(4,5)
+  @media screen and (max-width: $break-medium)
+    left: 40px
 
 .tile
   width: 20%
