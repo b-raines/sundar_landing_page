@@ -16,12 +16,15 @@ $break-small: 520px
 // Universal
 html
   font-size: 16px
+  height: 100%
 
 body
+  height: 100%
   font-size: 62.5% /* 1em = 10px */
 
 .container
   +zen-grid-container
+  min-height: 87%
   margin: 0 50px
   font-size: 1.6em
   font-family: 'Josefin Sans', serif
@@ -57,7 +60,6 @@ header
 // Tiles
 #tiles
   position: absolute
-  display: inline-block
   top: 30px
   +zen-grid-item(4,5)
   @media screen and (max-width: $break-medium)
@@ -65,6 +67,7 @@ header
 
 .tile
   width: 20%
+  max-height: 130px
   padding: 13px 1px
 
 // Form
@@ -143,11 +146,11 @@ select#type
 // Footer
 footer
   position: relative
-  bottom: -40px
+  bottom: -30px
   width: 100%
   background-color: #111
   padding: 10px 0 25px 0
-  margin-top: 20px
+  margin-top: 10px
   font-family: 'Josefin Sans', sans-serif
   font-size: 1.7em
   ul
